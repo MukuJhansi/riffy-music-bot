@@ -5,5 +5,10 @@ client.riffy.on("queueEnd", async (player) => {
     
     if (player.message) await player.message.delete();
     
-        player.autoplay(player);
+    if (player.isAutoplay) {
+        player.autoplay(player)
+    } else {
+        player.destroy();
+        channel.send("Queue has ended.");
+    }
 })
