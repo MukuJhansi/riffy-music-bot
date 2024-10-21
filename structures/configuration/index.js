@@ -7,7 +7,7 @@ module.exports = {
     mongodb_url: "process.env.MONGO_URI", //optional
     developers: ["1115658967012626542"],
     sharding: false,
-    database: true,
+    database: false,
     nodes: [
         {
             name: "Lavalink v4",
