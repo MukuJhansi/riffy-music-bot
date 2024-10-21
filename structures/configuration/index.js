@@ -1,18 +1,69 @@
+require("dotenv").config();
+
 module.exports = {
-    client_token: "",
-    client_id: "",
+    client_token: "process.env.CLIENT_TOKEN",
+    client_id: "process.env.CLIENT_ID",
     client_prefix: "!",
-    mongodb_url: "", //optional
-    developers: ["786504767358238720"],
+    mongodb_url: "process.env.MONGO_URI", //optional
+    developers: ["1115658967012626542"],
     sharding: false,
-    database: false,
+    database: true,
     nodes: [
         {
-            host: "localhost",
-            port: 2333,
+            name: "Lavalink v4",
+            host: "node-us.beban.tech",
+            port: 80,
+            password: "dsc.gg/bebancommunity",
+            secure: false,
+            reconnectTimeout: 5000,
+            reconnectTries: 15
+        },
+        {
+            name: "lavalink.jirayu.net 1",
+            host: "lavalink.jirayu.net",
             password: "youshallnotpass",
+            port: 13592,
+            reconnectTimeout: 5000,
+            reconnectTries: 15,
+            secure: false
+        },
+        {
+            name : "lavalink.jirayu.net",
+            host : "lavalink.jirayu.net",
+            port : 2334,
+            password : "youshallnotpass",
+            reconnectTimeout: 5000,
+            reconnectTries: 15,
+            secure : false  
+        },
+        {
+            name: "Catfein",
+            host: "lava.catfein.com",
+            password: "catfein",
+            port: 4000,
+            reconnectTimeout: 5000,
+            reconnectTries: 15,
+            secure: false
+        },
+        {
+            name: "Catfein DE",
+            host: "lavalink.alfari.id",
+            password: "catfein",
+            port: 443,
+            reconnectTimeout: 5000,
+            reconnectTries: 15,
+            secure: true
+        },
+        {
+            name: "LewdHuTao - Lavalink",
+            host: "node.lewdhutao.my.eu.org",
+            password: "youshallnotpass",
+            port: 80,
+            reconnectTimeout: 5000,
+            reconnectTries: 15,
             secure: false
         }
+        
     ]
 }
 
