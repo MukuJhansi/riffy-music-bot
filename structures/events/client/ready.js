@@ -11,11 +11,20 @@ client.on("ready", async () => {
 
     client.user.setPresence({
         activities: [
-            {
-                name: "Made By Gunman",
-                type: ActivityType.Playing
-            }
-        ],
+			{
+				name: "{Guilds} servers",
+				type: "WATCHING",
+				data: (client) => {
+					return {
+						Guilds: client.guilds.cache.size,
+					};
+				},
+			},
+			{
+				name: "Playing",
+				type: "Made By Gunman",
+			},
+		],
         status: "dnd"
     })
 })
