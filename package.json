@@ -15,7 +15,8 @@
     "ms": "^2.1.3",
     "musicard": "latest",
     "riffy": "latest",
-    "dotenv": "latest"
+    "dotenv": "latest",
+    "express": "latest"
   },
   "keywords": [
     "riffy",
