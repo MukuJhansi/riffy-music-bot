@@ -1,10 +1,10 @@
 require("dotenv").config();
 
 module.exports = {
-    client_token: "process.env.CLIENT_TOKEN",
-    client_id: "process.env.CLIENT_ID",
+    client_token: process.env.CLIENT_TOKEN,
+    client_id: process.env.CLIENT_ID,
     client_prefix: "!",
-    mongodb_url: "process.env.MONGO_URI", //optional
+    mongodb_url: process.env.MONGO_URI, //optional
     developers: ["1115658967012626542"],
     sharding: false,
     database: false,
