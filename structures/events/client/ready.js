@@ -12,10 +12,10 @@ client.on("ready", async () => {
     client.user.setPresence({
         activities: [
             {
-                name: "You",
-                type: ActivityType.Watching
+                name: "Made By Gunman",
+                type: ActivityType.Playing
             }
         ],
-        status: "online"
+        status: "dnd"
     })
 })
