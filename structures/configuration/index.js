@@ -10,6 +10,15 @@ module.exports = {
     database: false,
     nodes: [
         {
+            name: "lava4.horizxon.studio",        
+            host: "lava4.horizxon.studio",        
+            port: 80,
+            password: "horizxon.studio",
+            reconnectTimeout: 5000,
+            reconnectTries: 15,
+            secure: false
+        },
+        {
             name: "Lavalink v4",
             host: "node-us.beban.tech",
             port: 80,
