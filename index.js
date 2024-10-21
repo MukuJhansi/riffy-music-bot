@@ -2,6 +2,7 @@ const config = require("./structures/configuration/index");
 const { ShardingManager, ShardEvents } = require("discord.js");
 const { logger } = require("./structures/functions/logger")
 const express = require('express');
+const path = require('path');
 const app = express();
 const PORT = 800;
 app.use(express.static('public'));
