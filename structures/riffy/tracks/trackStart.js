@@ -40,7 +40,7 @@ client.riffy.on('trackStart', async (player, track) => {
 
     // Store the message and track in the player object
     player.message = msg;
-    player.track = track;
+    player.track = track; 
 
     let elapsedTime = 0; // Track elapsed time in seconds
     const intervalId = setInterval(async () => {
@@ -66,4 +66,9 @@ client.riffy.on('trackStart', async (player, track) => {
         }
     }, 1000); // Update every 1 second
 
+    // Emit trackEnd when the track finishes
+    player.once('trackEnd', async () => {
+        clearInterval(intervalId); // Stop refreshing
+        client.riffy.emit('trackEnd', player); // Emit trackEnd event to handle in another file
+    });
 });
